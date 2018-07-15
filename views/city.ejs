@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <% include partials/head.ejs %> 
+    </head>
+    <body>
+        <!--Navigation bar starts here-->
+        <% include partials/menu.ejs %> 
+        <!--Navigation bar ends here-->
+        <br/><br/><br/>        
+        <!--body main image-->
+        <br/>
+        <div class="container">
+            <div class="row">
+                    <% include partials/heading.ejs %>
+                <% for (var i = 1; i <= imgCount; i++) { %>
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="/images/<%= city %>/<%= i%>.jpg" alt="iLoveMyCity" class="img-thumbnail">
+                    </div>              
+
+                </div>
+                <% }%>
+
+            </div>
+
+        </div>        
+        <% include partials/jsinclude.ejs %> 
+    </body>
+</html>
